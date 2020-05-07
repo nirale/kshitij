@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/2756497.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+/* for overlay */
+.wrapper>* {
+    /* this above selector is important */
+    z-index: 11;
+    position: relative;
+}
+
+/* for overlay */
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #617c8d;
+    z-index: 0;
+    /* for overlay */
+    height: 100vh;
+    opacity: .8;
+    /* for overlay */
+}
+
+/*-------------- HEADER ----------- */
+header {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 10px;
+    /* border: 1px solid aqua; */
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav li a {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2rem;
+    /* border: 1px solid aqua; */
+    display: inline-block;
+}
+
+/* Start main content */
+
+.content {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    /* padding: 12rem 0; */
+    flex-grow: 1;
+    color: #fff;
+    /* border: 1px solid red; */
+}
+
+/* main content Left*/
+.content-left {
+    width: 50%;
+    /* border: 1px solid greenyellow; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-left h1 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.content-left p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 25px;
+}
+
+.searchBar input[type=text] {
+    width: 50%;
+    padding: 5px;
+    /*! margin: 10px 5px; */
+    border-radius: 25px;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: width .5s ease-out;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.3);
+    border-color: rgba(223, 225, 229, 0);
+    background-image: url('/img/search.png');
+    background-repeat: no-repeat;
+    padding-right: 25px;
+    background-position: 97% 50%;
+    line-height: 1.7;
+    font-size: 1.6rem;
+    padding-left: 18px;
+
+}
+
+/* main content Right*/
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border: 4px solid #608094;
+    border-radius: 10px;
+    background: #16394c;
+    opacity: .7;
+    padding: 3rem;
+    flex-wrap: wrap;
+    /*border: 1px solid orange;
+    */
+    /* height: 30rem; */
+}
+
+.content-right .cityName {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.content-right .weatherInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: auto 0; */
+    /* border: 1px solid yellow; */
+}
+
+.weatherInfo .discription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weatherInfo .discriptionText {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.weatherInfo .temperature {
+    font-size: 9rem;
+    font-weight: 300;
+}
+
+.weatherInfo .sideInfo {
+    font-size: 1.2rem
+}
+
+.sideInfo>p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+address {
+    margin-top: -1rem;
+}
+
+img {
+    color: #fff;
+}
+
+address a {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: lowercase;
+    padding: .4rem;
+    /* border: 1px solid red; */
+}
+
+/* End main content */
+
+.footer {
+    display: flex;
+    color: #fff;
+    margin: 1rem auto;
+}
