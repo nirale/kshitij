@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let location = search.value;
     cityName.innerHTML = 'Loading ....';
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    fetch(`/weather?address=${location}`)
         .then((response) => {
             response.json()
                 .then(
@@ -44,7 +44,6 @@ weatherForm.addEventListener('submit', (e) => {
                             pressure.innerHTML = 'Pressure : ' + data.forecast.pressure + ' mb';
 
                         }
-                        location = '';
 
                     }
                 )
@@ -52,3 +51,4 @@ weatherForm.addEventListener('submit', (e) => {
             console.log('Error ' + err);
         });
 })
+// location = '';
